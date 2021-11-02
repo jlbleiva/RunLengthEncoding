@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-using Newtonsoft.Json.Converters;
+
 
 public static class RunLengthEncoding
 {
     public static string Encode(string input)
     {
-        string c, nextchar;
-
+        string c;
         char lastChar;
-        //List<char> listChars = new List<char>();
-
+        
         if (input.Length == 0) return "";
 
         lastChar = input[0];
@@ -67,7 +65,6 @@ public static class RunLengthEncoding
                cont = 1;
            }
        }
-
 
        return result;
     }
